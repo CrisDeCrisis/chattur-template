@@ -33,11 +33,11 @@ const chartConfig = {
     },
     web: {
         label: "Web",
-        color: "var(--chart-1)",
+        color: "var(--chart-2)",
     },
     smartphone: {
         label: "Smartphone",
-        color: "var(--chart-2)",
+        color: "var(--chart-1)",
     },
 } satisfies ChartConfig
 
