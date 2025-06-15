@@ -13,12 +13,12 @@ export interface UserLogin {
 }
 
 export interface AuthState {
-  user: User;
+  user: User | null; // User can be null if not authenticated
 }
 
 export interface AuthAction {
   type: string;
-  payload?: {
+  payload: {
     user?: User;
   };
 }

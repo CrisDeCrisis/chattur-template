@@ -6,12 +6,12 @@ export const authReducer = (state: AuthState, action: AuthAction): AuthState => 
         case authTypes.LOGIN:
             return {
                 ...state,
-                user: action.payload?.user ?? null
+                user: action.payload.user!
             }
         case authTypes.SESSION:
             return {
                 ...state,
-                user: action.payload?.user ?? null
+                user: action.payload.user!
             }
         case authTypes.LOGOUT:
             return {

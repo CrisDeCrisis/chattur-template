@@ -31,15 +31,18 @@ export const AuthContextProvider = ({ children }: AuthProviderProps) => {
     const authLogin = async (user: UserLogin) => {
         try {
             setIsLoading(true);
-            const response = await loginService(user);
-            if (response) {
+            const userData = await loginService(user);
+            if (userData) {
                 dispatch({
                     type: authTypes.LOGIN,
-                    payload: response
+                    payload: { user: userData }
                 });
+                setIsLoading(false);
+                //TODO TOAST
             }
         } catch (error) {
             setIsLoading(false);
+            //TODO TOAST
             console.error({ 'Error al logear usuario': error });
         } finally {
             setIsLoading(false);
@@ -48,21 +51,23 @@ export const AuthContextProvider = ({ children }: AuthProviderProps) => {
 
     const authSession = async () => {
         try {
-            const response = await sessionService();
-            if (response.user) {
+            const user = await sessionService();
+            if (user) {
                 dispatch({
                     type: authTypes.SESSION,
-                    payload: response
+                    payload: { user }
                 });
             } else {
                 dispatch({
                     type: authTypes.LOGOUT,
+                    payload: {}
                 });
             }
         } catch (error) {
             console.error({ 'Error al obtener sesion': error });
             dispatch({
                 type: authTypes.LOGOUT,
+                payload: {}
             });
         }
     };
@@ -73,6 +78,7 @@ export const AuthContextProvider = ({ children }: AuthProviderProps) => {
             if (response && response.ok) {
                 dispatch({
                     type: authTypes.LOGOUT,
+                    payload: {}
                 });
             }
         } catch (error) {
