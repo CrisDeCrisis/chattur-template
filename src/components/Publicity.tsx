@@ -12,7 +12,7 @@ export default function Publicity() {
                         className={"flex flex-col lg:flex-row items-center overflow-hidden mb-6"}
                     >
                         <div className={
-                            `flex-shrink-0 w-full lg:basis-1/3 flex items-center justify-center mb-2 lg:mb-0 lg:mx-2 ` +
+                            `flex-shrink-0 w-full lg:basis-1/3 flex items-center justify-center mb-2 lg:mb-0 lg:mx-5 ` +
                             (impar
                                 ? "order-2 lg:order-1"
                                 : "order-1 lg:order-2")
