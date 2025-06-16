@@ -26,7 +26,7 @@ export default function Marketing() {
                     </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="hidden lg:block">
                     <CardHeader className="flex flex-col items-center">
                         <CardTitle className="text-2xl text-center">Un agente de turismo al alcance de tu mano</CardTitle>
                     </CardHeader>
