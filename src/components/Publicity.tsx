@@ -21,7 +21,7 @@ export default function Publicity() {
                             {carta.tipo === "imagen" ? (
                                 <img
                                     src={carta.src}
-                                    alt=""
+                                    alt={carta.alt}
                                     className="object-contain max-h-60 lg:max-h-72 lg:max-w-full"
                                 />
                             ) : (
