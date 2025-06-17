@@ -59,7 +59,7 @@ export function Registers() {
     })
 
     return (
-        <Card className="pt-0 min-h-[90vh] flex-1 rounded-xl md:min-h-min">
+        <Card className="pt-0 min-h-[90vh] flex-1 rounded-xl md:min-h-min hidden lg:block">
             <CardHeader className="flex items-center gap-2 space-y-0 border-b py-5 sm:flex-row">
                 <div className="grid flex-1 gap-1">
                     <CardTitle>Registro de usuarios</CardTitle>
