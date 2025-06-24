@@ -19,9 +19,10 @@ export default function Marketing() {
             <div className="w-[90%] mx-auto space-y-8">
                 <Card>
                     <CardHeader className="flex flex-col items-center">
-                        <CardTitle className="text-2xl text-center">Usuarios registrados en la plataforma!</CardTitle>
+                        <CardTitle className="text-2xl text-center">¡Únete a nosotros y sé parte de esta comunidad en crecimiento!</CardTitle>
                     </CardHeader>
                     <CardContent className="flex flex-col items-center justify-center space-y-4">
+                        <p className="text-sm">Usuarios registrados actualmente:</p>
                         <ContadorAnimado valorObjetivo={usuarios} />
                     </CardContent>
                 </Card>
